@@ -1,8 +1,57 @@
 this project is about Laravel GraphQL
 to use GraphQL in laravel we need lighthouse
+
 install lighthouse = composer require nuwave/lighthouse
 then to use it in laravel we need playground ( can think of it as postman)
+
 composer require mll-lab/laravel-graphql-playground
 
+php artisan lighthouse:query Greetings
 
- php artisan lighthouse:query Greetings
+to reach GraphQl playground add this ( /graphql-playground ) in the end of domain
+
+
+# Write your query or mutation here
+#{
+ # greetings
+#}
+#single user
+#{
+#user(id: 2) {
+#    id
+#    name
+#    email
+#  }
+#}
+# ailases to fetch multiple user
+#{
+ #userOne: user(id: 2) {
+  #  id
+   # name
+   # email
+  #}
+
+# userTwo: user(id: 4) {
+ #   id
+ #   name
+  #  email
+ # }
+#}
+#paginate
+{
+  users (first:5 , page :1){
+    data{
+      id
+      name
+    }
+    paginatorInfo{
+      currentPage
+      lastPage
+      hasMorePages
+      lastItem
+      total
+    }
+  }
+}
+
+
