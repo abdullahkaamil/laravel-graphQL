@@ -1,0 +1,8 @@
+this project is about Laravel GraphQL
+to use GraphQL in laravel we need lighthouse
+install lighthouse = composer require nuwave/lighthouse
+then to use it in laravel we need playground ( can think of it as postman)
+composer require mll-lab/laravel-graphql-playground
+
+
+ php artisan lighthouse:query Greetings
