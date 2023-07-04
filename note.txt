@@ -15,6 +15,15 @@ to reach GraphQl playground add this ( /graphql-playground ) in the end of domai
 #{
  # greetings
 #}
+mutation {
+deleteUser(id: 12){
+  id
+}
+}
+
+#{
+ # greetings
+#}
 #single user
 #{
 #user(id: 2) {
@@ -38,20 +47,39 @@ to reach GraphQl playground add this ( /graphql-playground ) in the end of domai
  # }
 #}
 #paginate
-{
-  users (first:5 , page :1){
-    data{
-      id
-      name
-    }
-    paginatorInfo{
-      currentPage
-      lastPage
-      hasMorePages
-      lastItem
-      total
-    }
-  }
-}
+#{
+ # users (first:5 , page :1){
+  #  data{
+   #   id
+    #  name
+#    }
+ #   paginatorInfo{
+  #    currentPage
+   #   lastPage
+    #  hasMorePages
+     # lastItem
+      #total
+    #}
+ # }
+#}
+
+
+
+#mutation {
+ # createUser( name:"test User", email:"test1@test.com", password:"password")
+  #  {
+   #   id
+    #	name
+#    }
+#}
+
+
+#mutation {
+  #updateUser( id: 11,name:"test User Update")
+   # {
+  #    id
+   # 	name
+   # }
+#}
 
 
